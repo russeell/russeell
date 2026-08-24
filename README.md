@@ -1,26 +1,31 @@
 # AI Agent / LLM Application Engineer
 
-I build reliable LLM applications with a focus on **Agent Runtime, RAG, evaluation, and Python backend engineering**.
+I work on reliable LLM applications in Python, with a focus on **Agent Runtime, async/concurrency, state consistency, RAG, and evaluation**.
 
-## Open-source contribution
+I contribute to [OpenAI Agents Python](https://github.com/openai/openai-agents-python): **3 merged PRs and 1 maintainer-led upstream fix with `Co-authored-by` credit**. My contribution workflow covers failure reproduction, root-cause analysis, implementation, regression testing, and maintainer review.
+
+## Selected upstream work
 
 ### OpenAI Agents Python
 
-[openai/openai-agents-python](https://github.com/openai/openai-agents-python)
+**Concurrent tool isolation** · [PR #3843 · Merged](https://github.com/openai/openai-agents-python/pull/3843)<br>
+Isolated provider-backed computer tool instances across concurrent runs, preventing shared mutable state from leaking between tasks.
 
-**4 merged upstream records: 3 merged PRs + 1 upstream fix with `Co-authored-by` credit**
+**Session initialization race** · [PR #3821 · Merged](https://github.com/openai/openai-agents-python/pull/3821)<br>
+Serialized lazy conversation-session initialization so concurrent first writes cannot create competing conversation IDs, with regression coverage for initialization failure and takeover.
 
-| Status | Record | Focus |
-| --- | --- | --- |
-| **Merged** | [PR #3843](https://github.com/openai/openai-agents-python/pull/3843) | Isolate provider instances across concurrent runs |
-| **Merged** | [PR #3821](https://github.com/openai/openai-agents-python/pull/3821) | Serialize OpenAI conversation session initialization |
-| **Merged** | [PR #3815](https://github.com/openai/openai-agents-python/pull/3815) | Preserve user messages containing history wrappers |
-| **Merged · Co-authored-by** | [Issue #4393](https://github.com/openai/openai-agents-python/issues/4393) → [PR #4412](https://github.com/openai/openai-agents-python/pull/4412) | Identify and reproduce max-turn handler session-semantics issues; the maintainer-led fix retained my co-author credit |
+**Handoff history boundary** · [PR #3815 · Merged](https://github.com/openai/openai-agents-python/pull/3815)<br>
+Tightened history-wrapper detection so legitimate user messages are not mistaken for SDK-generated summaries and removed from conversation history.
 
-My contributions focus on **concurrency isolation, session consistency, handoff message boundaries, and terminal-run semantics** in Agent Runtime behavior.
+**Terminal-run consistency** · [Issue #4393](https://github.com/openai/openai-agents-python/issues/4393) → [PR #4412 · Merged, Co-authored-by](https://github.com/openai/openai-agents-python/pull/4412)<br>
+Found and reproduced inconsistent `max_turns` finalization across streamed and non-streamed runs. The maintainer extended the fix and retained my co-author credit.
 
-## Current focus
+[View my upstream pull requests →](https://github.com/openai/openai-agents-python/pulls?q=is%3Apr+author%3Arusseell)
 
-- Agent Runtime and long-running task execution
-- RAG retrieval, reranking, evidence grounding, and evaluation
-- Python, asyncio, FastAPI, Pydantic, and backend reliability
+## Engineering focus
+
+- **Agent Runtime:** tool execution, sessions, handoffs, tracing, and long-running task reliability
+- **LLM applications:** RAG, retrieval and reranking, evidence grounding, and evaluation
+- **Backend engineering:** Python, asyncio, FastAPI, Pydantic, testing, and observability
+
+Open to **AI Agent / LLM application engineering** roles in **Shenzhen or Shanghai**.
