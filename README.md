@@ -1,4 +1,4 @@
-# DongBo | AI Agent / LLM Application Engineer
+# AI Agent / LLM Application Engineer
 
 I build reliable LLM applications with a focus on **Agent Runtime, RAG, evaluation, and Python backend engineering**.
 
