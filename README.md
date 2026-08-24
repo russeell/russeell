@@ -28,4 +28,3 @@ Found and reproduced inconsistent `max_turns` finalization across streamed and n
 - **LLM applications:** RAG, retrieval and reranking, evidence grounding, and evaluation
 - **Backend engineering:** Python, asyncio, FastAPI, Pydantic, testing, and observability
 
-Open to **AI Agent / LLM application engineering** roles in **Shenzhen or Shanghai**.
