@@ -2,8 +2,6 @@
 
 I work on reliable LLM applications in Python, with a focus on **Agent Runtime, async/concurrency, state consistency, RAG, and evaluation**.
 
-I contribute to [OpenAI Agents Python](https://github.com/openai/openai-agents-python): **3 merged PRs and 1 maintainer-led upstream fix with `Co-authored-by` credit**. My contribution workflow covers failure reproduction, root-cause analysis, implementation, regression testing, and maintainer review.
-
 ## Selected upstream work
 
 ### OpenAI Agents Python
@@ -26,5 +24,3 @@ Found and reproduced inconsistent `max_turns` finalization across streamed and n
 
 - **Agent Runtime:** tool execution, sessions, handoffs, tracing, and long-running task reliability
 - **LLM applications:** RAG, retrieval and reranking, evidence grounding, and evaluation
-- **Backend engineering:** Python, asyncio, FastAPI, Pydantic, testing, and observability
-
