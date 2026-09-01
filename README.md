@@ -18,8 +18,6 @@ Tightened history-wrapper detection so legitimate user messages are not mistaken
 **Terminal-run consistency** · [Issue #4393](https://github.com/openai/openai-agents-python/issues/4393) → [PR #4412 · Merged, Co-authored-by](https://github.com/openai/openai-agents-python/pull/4412)<br>
 Found and reproduced inconsistent `max_turns` finalization across streamed and non-streamed runs. The maintainer extended the fix and retained my co-author credit.
 
-[View my upstream pull requests →](https://github.com/openai/openai-agents-python/pulls?q=is%3Apr+author%3Arusseell)
-
 ## Engineering focus
 
 - **Agent Runtime:** tool execution, sessions, handoffs, tracing, and long-running task reliability
